@@ -25,7 +25,9 @@
       }
 
       function goToSlide(i){
-        slides[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+        var slide = slides[i];
+        var target = slide.offsetLeft - (track.clientWidth - slide.offsetWidth) / 2;
+        track.scrollTo({left: target, behavior: 'smooth'});
       }
 
       // Keep dots in sync when the user swipes manually
