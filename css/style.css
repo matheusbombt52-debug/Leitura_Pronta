@@ -921,14 +921,15 @@
   .modal-btn-decline{
     display:block;
     width:100%;
-    background:var(--bg-white);
+    background:none;
     color:var(--text-gray);
     font-weight:600;
     font-size:13px;
-    padding:13px;
-    border-radius:12px;
-    border:1px solid var(--border-light);
-    text-decoration:none;
+    padding:8px;
+    border:none;
+    text-align:center;
+    text-decoration:underline;
+    text-underline-offset:3px;
   }
 
   @keyframes pulse-soft{
