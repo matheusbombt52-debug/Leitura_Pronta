@@ -109,6 +109,7 @@
     if (upsellOverlay && upsellTrigger){
       function openUpsell(e){
         e.preventDefault();
+        e.stopImmediatePropagation();
         upsellOverlay.classList.add('open');
       }
 
