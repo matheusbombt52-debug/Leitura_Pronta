@@ -22,7 +22,10 @@
       function setActive(i){
         activeIndex = i;
         dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });
+        slides.forEach(function(s, idx){ s.classList.toggle('active', idx === i); });
       }
+
+      setActive(0);
 
       function goToSlide(i){
         var slide = slides[i];

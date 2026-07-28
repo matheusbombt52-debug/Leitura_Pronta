@@ -411,6 +411,19 @@
   .carousel-slide{
     flex:0 0 auto;
     scroll-snap-align:center;
+    opacity:0.45;
+    transform:scale(0.86);
+    transition:transform 0.35s ease, opacity 0.35s ease;
+  }
+
+  .carousel-slide.active{
+    opacity:1;
+    transform:scale(1);
+    z-index:2;
+  }
+
+  .carousel-slide.active .img-placeholder{
+    box-shadow:0 22px 45px -10px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.15);
   }
 
   .carousel-slide .img-placeholder{
