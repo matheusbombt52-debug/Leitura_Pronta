@@ -147,7 +147,7 @@
             <li class="unavailable"><span class="cross">❌</span> Bônus inclusos</li>
             <li class="unavailable"><span class="cross">❌</span> Atualizações incluídas</li>
           </ul>
-          <a href="#planos" class="btn-outline">Quero o Prático</a>
+          <a href="#planos" class="btn-outline" id="cta-pratico">Quero o Prático</a>
         </div>
 
         <div class="price-card featured">
@@ -297,6 +297,27 @@
       <p class="micro-text">Material digital em PDF • Receba por e-mail após a compra</p>
     </div>
   </section>
+
+  <!-- UPSELL MODAL -->
+  <div class="modal-overlay" id="upsell-overlay">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="upsell-title">
+      <button type="button" class="modal-close" id="upsell-close" aria-label="Fechar">✕</button>
+
+      <span class="modal-badge">⏱ OFERTA POR TEMPO LIMITADO</span>
+
+      <h3 class="modal-title" id="upsell-title">Espere, temos algo especial para você</h3>
+
+      <p class="modal-text">Leve o <strong>Kit Profissional Completo</strong> com todos os relatórios, planos de intervenção e acompanhamentos por um valor exclusivo que não se repete.</p>
+
+      <div class="modal-price">
+        <span class="modal-price-old">De R$ 24,90</span>
+        <span class="modal-price-new">R$ <strong>17</strong>,90</span>
+      </div>
+
+      <a href="#planos" class="btn-primary modal-btn-accept" id="upsell-accept">Aceitar Oferta por R$ 17,90 →</a>
+      <a href="#planos" class="modal-btn-decline" id="upsell-decline">Não, continuar com o Básico (R$ 10,00)</a>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 

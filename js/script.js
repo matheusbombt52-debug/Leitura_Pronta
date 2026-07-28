@@ -101,4 +101,33 @@
 
       startAutoplay();
     });
-  
+
+    // ---------- UPSELL MODAL ----------
+    var upsellOverlay = document.getElementById('upsell-overlay');
+    var upsellTrigger = document.getElementById('cta-pratico');
+
+    if (upsellOverlay && upsellTrigger){
+      function openUpsell(e){
+        e.preventDefault();
+        upsellOverlay.classList.add('open');
+      }
+
+      function closeUpsell(){
+        upsellOverlay.classList.remove('open');
+      }
+
+      upsellTrigger.addEventListener('click', openUpsell);
+      document.getElementById('upsell-close').addEventListener('click', closeUpsell);
+
+      upsellOverlay.addEventListener('click', function(e){
+        if (e.target === upsellOverlay) closeUpsell();
+      });
+
+      document.getElementById('upsell-accept').addEventListener('click', closeUpsell);
+      document.getElementById('upsell-decline').addEventListener('click', closeUpsell);
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') closeUpsell();
+      });
+    }
+
