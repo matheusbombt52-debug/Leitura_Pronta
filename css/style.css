@@ -399,8 +399,13 @@
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
-    padding:4px 0 4px 22%;
-    scroll-padding-left:22%;
+    padding:4px calc(50% - 110px);
+    scroll-padding:0 calc(50% - 110px);
+  }
+
+  .carousel:has(.testimonial-slide) .carousel-track{
+    padding:4px calc(50% - 90px);
+    scroll-padding:0 calc(50% - 90px);
   }
 
   .carousel-track::-webkit-scrollbar{
@@ -655,8 +660,14 @@
   /* ================= DESKTOP ================= */
   @media (min-width:960px){
     .carousel-track{
-      padding-left:calc(50% - 150px);
-      scroll-padding-left:calc(50% - 150px);
+      padding-left:calc(50% - 140px);
+      padding-right:calc(50% - 140px);
+      scroll-padding:0 calc(50% - 140px);
+    }
+    .carousel:has(.testimonial-slide) .carousel-track{
+      padding-left:calc(50% - 105px);
+      padding-right:calc(50% - 105px);
+      scroll-padding:0 calc(50% - 105px);
     }
     .carousel-slide .img-placeholder{width:280px;}
     .testimonial-slide .img-placeholder{width:210px;}

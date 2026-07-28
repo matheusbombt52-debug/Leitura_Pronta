@@ -33,15 +33,28 @@
         track.scrollTo({left: target, behavior: 'smooth'});
       }
 
-      // Keep dots in sync when the user swipes manually
-      var observer = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if (entry.isIntersecting && entry.intersectionRatio > 0.6){
-            setActive(slides.indexOf(entry.target));
+      // Keep dots/highlight in sync with whichever slide is nearest the center,
+      // even on wide screens where several slides can be visible at once.
+      function updateActiveFromScroll(){
+        var trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2;
+        var closestIdx = 0;
+        var closestDist = Infinity;
+        slides.forEach(function(s, idx){
+          var r = s.getBoundingClientRect();
+          var dist = Math.abs((r.left + r.width / 2) - trackCenter);
+          if (dist < closestDist){
+            closestDist = dist;
+            closestIdx = idx;
           }
         });
-      }, {root: track, threshold: [0.6]});
-      slides.forEach(function(s){ observer.observe(s); });
+        setActive(closestIdx);
+      }
+
+      var scrollRaf = null;
+      track.addEventListener('scroll', function(){
+        if (scrollRaf) cancelAnimationFrame(scrollRaf);
+        scrollRaf = requestAnimationFrame(updateActiveFromScroll);
+      }, {passive:true});
 
       function startAutoplay(){
         stopAutoplay();
