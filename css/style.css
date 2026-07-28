@@ -196,9 +196,12 @@
     width:100%;
   }
 
-  .hero-image-wrap .img-placeholder{
-    aspect-ratio:1512/560;
-    min-height:220px;
+  .hero-image{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:16px;
+    box-shadow:0 30px 60px -20px rgba(15,23,42,0.35);
   }
 
   /* ---------- SECTION GENERIC ---------- */
