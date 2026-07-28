@@ -77,6 +77,28 @@
       track.addEventListener('pointerdown', pauseThenResume, {passive:true});
       track.addEventListener('touchstart', pauseThenResume, {passive:true});
 
+      var prevBtn = document.createElement('button');
+      prevBtn.className = 'carousel-arrow carousel-arrow-prev';
+      prevBtn.type = 'button';
+      prevBtn.setAttribute('aria-label', 'Slide anterior');
+      prevBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+      prevBtn.addEventListener('click', function(){
+        goToSlide((activeIndex - 1 + slides.length) % slides.length);
+        pauseThenResume();
+      });
+      carousel.appendChild(prevBtn);
+
+      var nextBtn = document.createElement('button');
+      nextBtn.className = 'carousel-arrow carousel-arrow-next';
+      nextBtn.type = 'button';
+      nextBtn.setAttribute('aria-label', 'Próximo slide');
+      nextBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+      nextBtn.addEventListener('click', function(){
+        goToSlide((activeIndex + 1) % slides.length);
+        pauseThenResume();
+      });
+      carousel.appendChild(nextBtn);
+
       startAutoplay();
     });
   

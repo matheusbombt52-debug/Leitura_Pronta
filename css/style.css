@@ -401,7 +401,40 @@
   /* ---------- CAROUSEL ---------- */
   .carousel{
     width:100%;
+    position:relative;
   }
+
+  .carousel-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:none;
+    background:rgba(255,255,255,0.92);
+    color:#0f172a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    z-index:3;
+    transition:background 0.2s ease, transform 0.2s ease;
+  }
+
+  .carousel-arrow:hover{
+    background:#fff;
+    transform:translateY(-50%) scale(1.08);
+  }
+
+  .carousel-arrow svg{
+    width:20px;
+    height:20px;
+  }
+
+  .carousel-arrow-prev{ left:2px; }
+  .carousel-arrow-next{ right:2px; }
 
   .carousel-track{
     display:flex;
