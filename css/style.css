@@ -494,6 +494,12 @@
     aspect-ratio:270/580;
   }
 
+  .testimonial-slide .carousel-slide-photo,
+  .testimonial-slide-photo{
+    width:180px;
+    aspect-ratio:800/1421;
+  }
+
   .carousel-dots{
     display:flex;
     justify-content:center;
