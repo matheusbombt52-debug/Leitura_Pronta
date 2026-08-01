@@ -15,8 +15,21 @@
 </head>
 <body>
 
-  <!-- BACK REDIRECT: se o lead tentar sair pelo botao voltar, manda para a pagina de oferta -->
+  <!-- BACK REDIRECT: se o lead tentar sair pelo botao voltar, manda para a pagina de oferta.
+       Links #ancora (ex: "Quero Tudo Pronto") tambem disparam popstate por padrao do navegador,
+       entao aqui a rolagem deles e feita manualmente, sem mexer no historico, para nao ser
+       confundida com um voltar de verdade. -->
   <script>(function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute('href').slice(1);
+      var target = id && document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+
     if (sessionStorage.getItem('brShown')) return;
     history.pushState({brGuard:true}, '', location.href);
     window.addEventListener('popstate', function(){
