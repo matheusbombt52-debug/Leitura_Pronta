@@ -15,6 +15,17 @@
 </head>
 <body>
 
+  <!-- BACK REDIRECT: se o lead tentar sair pelo botao voltar, manda para a pagina de oferta -->
+  <script>(function(){
+    if (sessionStorage.getItem('brShown')) return;
+    history.pushState({brGuard:true}, '', location.href);
+    window.addEventListener('popstate', function(){
+      if (sessionStorage.getItem('brShown')) return;
+      sessionStorage.setItem('brShown', '1');
+      window.location.href = 'oferta.html';
+    });
+  })();</script>
+
   <!-- TOP BAR -->
   <div class="topbar">Baixe em PDF e use quando quiser • Entrega imediata no seu e-mail após a compra • a partir de R$ 10</div>
 
