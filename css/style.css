@@ -494,7 +494,7 @@
   .carousel-slide-photo{
     display:block;
     width:220px;
-    aspect-ratio:3/4;
+    aspect-ratio:2/3;
     object-fit:cover;
     border-radius:8px;
   }
