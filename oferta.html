@@ -38,8 +38,17 @@
     <div class="container" style="text-align:center;">
       <h1 style="font-size:23px;line-height:1.3;text-wrap:balance;">⚠️ Espera! Antes de sair, veja isso 👀</h1>
       <p class="section-subtitle" style="margin-top:8px;">Preparamos um desconto exclusivo que não vai aparecer de novo. Garanta agora com o melhor preço.</p>
+      <span class="discount-badge" style="margin:14px 0 0;font-size:13px;padding:6px 14px;">⏰ Oferta válida só até hoje, <span id="offer-date"></span></span>
     </div>
   </header>
+  <script>(function(){
+    var el = document.getElementById('offer-date');
+    if (!el) return;
+    var d = new Date();
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    el.textContent = dd + '/' + mm + '/' + d.getFullYear();
+  })();</script>
 
   <!-- PRICING -->
   <section class="section-light" style="padding:16px 0 52px;">
