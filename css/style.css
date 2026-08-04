@@ -212,7 +212,9 @@
   .section-light{background:var(--bg-white);}
   .section-gray{background:var(--bg-light);}
   .section-navy{background:var(--navy-dark);color:#fff;}
-  .section-soft-blue{background:#cfe3fb;}
+  .section-soft-blue{background:#1A387F;color:#fff;}
+  .section-soft-blue .section-title{color:#ffffff;}
+  .section-soft-blue .section-subtitle{color:#a9b2cb;}
 
   .section-title{
     font-size:26px;
