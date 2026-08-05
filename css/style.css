@@ -222,6 +222,22 @@
     margin-bottom:14px;
   }
 
+  .section-badge{
+    display:block;
+    width:fit-content;
+    margin:0 auto 18px;
+    background:#eef2ff;
+    color:var(--navy);
+    border:1px solid #c7d2f0;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:0.4px;
+    padding:7px 16px;
+    border-radius:999px;
+  }
+
+  .text-blue-accent{color:#2b57d1;}
+
   .section-navy .section-title{color:#ffffff;}
 
   .section-subtitle{
