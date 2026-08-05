@@ -257,8 +257,7 @@
   .bonus-card .bonus-image{
     display:block;
     width:100%;
-    aspect-ratio:16/10;
-    object-fit:cover;
+    height:auto;
     border-radius:10px;
     margin-bottom:16px;
   }
