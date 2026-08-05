@@ -238,6 +238,49 @@
 
   .text-blue-accent{color:#2b57d1;}
 
+  /* ---------- BONUS ---------- */
+  .bonus-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    margin-top:8px;
+  }
+
+  .bonus-card{
+    background:#fff;
+    border:1px solid var(--border-light);
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 4px 18px rgba(20,40,100,0.06);
+  }
+
+  .bonus-card .bonus-image{
+    aspect-ratio:16/10;
+    margin-bottom:16px;
+  }
+
+  .bonus-card .bonus-tag{
+    display:inline-block;
+    background:#eef2ff;
+    color:var(--navy);
+    font-size:12px;
+    font-weight:800;
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:10px;
+  }
+
+  .bonus-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+  }
+
+  .bonus-card p{
+    font-size:14px;
+    color:var(--text-gray);
+    line-height:1.55;
+  }
+
   .section-navy .section-title{color:#ffffff;}
 
   .section-subtitle{
@@ -814,6 +857,10 @@
 
     .cards-3, .steps-3{
       grid-template-columns:repeat(3,1fr);
+    }
+
+    .bonus-grid{
+      grid-template-columns:repeat(2,1fr);
     }
 
     .section-title{font-size:32px;}
