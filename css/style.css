@@ -946,8 +946,8 @@
     display:inline-flex;
     align-items:center;
     gap:6px;
-    background:#fff4e0;
-    color:#b45309;
+    background:#e6f7ef;
+    color:var(--green-dark);
     font-size:12px;
     font-weight:800;
     letter-spacing:0.2px;
@@ -975,6 +975,10 @@
   .modal-text strong{color:var(--text-dark);}
 
   .modal-price{
+    background:#f2faf6;
+    border:1px solid #d9f0e6;
+    border-radius:14px;
+    padding:14px;
     margin-bottom:22px;
   }
 
@@ -989,7 +993,7 @@
   .modal-price-new{
     font-size:20px;
     font-weight:700;
-    color:var(--text-dark);
+    color:var(--green-dark);
   }
 
   .modal-price-new strong{
@@ -999,7 +1003,7 @@
   .modal-btn-accept{
     display:block;
     width:100%;
-    background:var(--text-dark);
+    background:var(--green);
     color:#fff;
     font-weight:700;
     font-size:15px;
@@ -1010,7 +1014,13 @@
     transition:background 0.2s ease;
   }
 
-  .modal-btn-accept:hover{background:#000;}
+  .modal-btn-accept:hover{background:var(--green-dark);}
+
+  .modal-card .price-list{
+    background:var(--bg-light);
+    border-radius:12px;
+    padding:6px 14px;
+  }
 
   .modal-btn-decline{
     display:block;
@@ -1042,5 +1052,5 @@
     animation:pulse-soft 2.2s ease-in-out infinite;
   }
 
-  #upsell-accept{ --pulse-color: rgba(15,23,42,0.35); }
+  #upsell-accept{ --pulse-color: rgba(18,184,134,0.4); }
   #cta-completo{ --pulse-color: rgba(18,184,134,0.45); }
