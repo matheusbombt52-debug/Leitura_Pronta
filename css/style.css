@@ -136,7 +136,8 @@
   }
 
   .hero h1{
-    font-size:34px;
+    font-size:29px;
+    text-wrap:balance;
     color:#ffffff;
   }
 
