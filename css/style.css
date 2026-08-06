@@ -610,6 +610,13 @@
   }
 
   /* ---------- BEFORE / AFTER ---------- */
+  .reality-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-bottom:36px;
+  }
+
   .ba-wrap{
     display:flex;
     flex-direction:column;
@@ -860,6 +867,10 @@
 
     .cards-3, .steps-3{
       grid-template-columns:repeat(3,1fr);
+    }
+
+    .reality-grid{
+      grid-template-columns:repeat(2,1fr);
     }
 
     .bonus-grid{
